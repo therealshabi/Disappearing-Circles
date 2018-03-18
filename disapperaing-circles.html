@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disapperaing Circles</title>
+    
+    <style type="text/css">
+    
+        #circle-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            height: 160px;
+            background-color: black;
+            box-shadow: 5px 10px 10px #888888;
+            margin: 80px auto;
+            padding: 0;
+        }
+        
+        #circle-box > div {
+            height: 80px;
+            flex-flow: row wrap;
+            width: 80px;
+            border-radius: 50%;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        #red-circle {
+            background-color: red;
+        }
+        
+        #blue-circle {
+            background-color: blue;
+        }
+        
+        #green-circle {
+            background-color: greenyellow;
+        }
+        
+        #reset-button-div {
+            text-align: center;
+        }
+        
+        #reset {
+            padding: 6px;
+            border-radius: 10%;
+            width: 80px;
+            height: 40px;
+        }
+        
+        #reset:hover {
+            box-shadow: 5px 5px 5px #888888;
+        }
+        
+        #reset:focus {
+            outline: 0;
+        }
+        
+        
+    </style>
+</head>
+<body>
+  
+     <div id="circle-box">
+        
+         <div id="red-circle"></div>
+        
+         <div id="blue-circle"></div>
+        
+         <div id="green-circle"></div>
+                  
+     </div>
+     
+     <div id="reset-button-div">
+         
+        <button id="reset">Reset</button>
+         
+     </div>
+     
+   
+       <script type="application/javascript">
+        
+        document.getElementById("red-circle").onclick = function() {
+            document.getElementById("red-circle").style.display = "none";
+        }
+        
+        document.getElementById("blue-circle").onclick = function() {
+            document.getElementById("blue-circle").style.display = "none";
+        }
+        
+        document.getElementById("green-circle").onclick = function() {
+            document.getElementById("green-circle").style.display = "none";
+        }
+        
+        document.getElementById("reset").onclick = function() {
+            document.getElementById("red-circle").style.display = "block";
+            document.getElementById("blue-circle").style.display = "block";
+            document.getElementById("green-circle").style.display = "block";
+        }
+        
+    </script>
+    
+</body>
+</html>
